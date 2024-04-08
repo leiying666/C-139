@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+char* my_strcat(char* dest,const char* src)
+{
+    char* ret=dest;
+    while(*ret!='\0')
+    {
+        *ret++;
+    }
+    while(*ret++=*src++)
+    {;}
+    return dest;
+}
+int main()
+{
+    char a[30]="abcdef";
+    char b[]="bit";
+    my_strcat(a,b);
+    printf("%s",a);
+    return 0;
+}
